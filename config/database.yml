@@ -81,6 +81,4 @@ test:
 #
 production:
   <<: *default
-  database: cloneInst_production
-  username: cloneInst
-  password: <%= ENV["CLONEINST_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>

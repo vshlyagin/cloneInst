@@ -15,6 +15,8 @@ gem "image_processing", "~> 1.12.2"
 
 gem "mini_magick", ">= 4.3.5"
 
+gem "aws-sdk-s3", "~> 1.117"
+
 # Use postgresql as the database for Active Record
 gem "pg", "~> 1.1"
 
@@ -48,6 +50,9 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
+# Autorization
+gem 'devise'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
@@ -55,7 +60,10 @@ gem "bootsnap", require: false
 # gem "image_processing", "~> 1.2"
 
 group :development, :test do
-  # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
+  gem 'ffaker'
+  gem 'database_cleaner-active_record'
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
 end
 
@@ -65,6 +73,7 @@ group :development do
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
+  gem 'letter_opener'
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
@@ -76,3 +85,5 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+

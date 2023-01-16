@@ -4,8 +4,9 @@
     <%= post.body %>
   </p>
 
+    <%@idparam="/posts/" + post.id.to_s %>
   <p>
-    <div class = "image"><%= image_tag post.image_url%></div>
+    <a href = "<%= @idparam %>"><div class = "image"><%= image_tag post.image_url%></div></a>
   </p>
 
 </div>
